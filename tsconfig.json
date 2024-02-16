@@ -23,10 +23,15 @@
     /* Alias */
     "baseUrl": "src",
     "paths": {
-      "@/*": ["./src/*","./dist/*",""],
-      //"@/assets/*": ["./src/assets/*"],
-    }
+      "@pages/*": ["./pages/*"],
+      "@assets/*": ["./assets/*"],
+      "@styles/*": ["./styles/*"],
+      "@api/*": ["./api/*"],
+      "@components/*": ["./components/*"],
+      "@routes/*": ["./routes/*"],
+      "@layouts/*": ["./layouts/*"],
+    },
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "eslintrc.json"],
+  "references": [{ "path": "./tsconfig.node.json" }],
 }

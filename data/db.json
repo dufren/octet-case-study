@@ -1,0 +1,124 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "name": "Stranger Things",
+      "year": 2015,
+      "country": "USA",
+      "imdb": "86.0",
+      "category": "Action, Adventure, Horror",
+      "isTvSeries": true,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "2",
+      "name": "Batman Begins",
+      "year": 2005,
+      "country": "USA",
+      "imdb": "82.0",
+      "category": "Action, Adventure",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "3",
+      "name": "Spider-Man : Into The Spider Verse",
+      "year": 2018,
+      "country": "USA",
+      "imdb": "84.0",
+      "category": "Animation, Action, Adventure",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "4",
+      "name": "Dunkirk",
+      "year": 2017,
+      "country": "USA",
+      "imdb": "78.0",
+      "category": "Action, Drama, History",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "5",
+      "name": "Dune",
+      "year": 2021,
+      "country": "USA",
+      "imdb": "84.0",
+      "category": "Action, Adventure, Drama",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "6",
+      "name": "No Time To Die",
+      "year": 2021,
+      "country": "USA",
+      "imdb": "76.0",
+      "category": "Action, Adventure, Thriller",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "7",
+      "name": "Shang-Chi and the Legend of the Ten Rings",
+      "year": 2021,
+      "country": "USA",
+      "imdb": "79.0",
+      "category": "Action, Adventure, Fantasy",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "8",
+      "name": "Don't Breathe 2",
+      "year": 2021,
+      "country": "USA",
+      "imdb": "61.0",
+      "category": "Action, Drama, Horror",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "9",
+      "name": "The Dark Knight",
+      "year": 2008,
+      "country": "USA",
+      "imdb": "90.0",
+      "category": "Action, Drama, Adventure",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "10",
+      "name": "Rocky",
+      "year": 1976,
+      "country": "USA",
+      "imdb": "81.0",
+      "category": "Action, Adventure, Drama",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "11",
+      "name": "Fight Club",
+      "year": 1999,
+      "country": "USA",
+      "imdb": "88.0",
+      "category": "Action, Drama, Fantasy",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    },
+    {
+      "id": "12",
+      "name": "The Prestige",
+      "year": 2006,
+      "country": "USA, United Kingdom",
+      "imdb": "86.0",
+      "category": "Action, Drama, Fantasy",
+      "isTvSeries": false,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus."
+    }
+  ]
+}
