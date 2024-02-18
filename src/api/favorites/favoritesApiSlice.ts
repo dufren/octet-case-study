@@ -1,4 +1,4 @@
-import { apiSlice } from '@api/apiSlice';
+import { apiSlice } from '@api/base/apiSlice';
 import { BaseMovieResponse } from '../../types/endpoints';
 
 export const favoritesApislice = apiSlice.injectEndpoints({

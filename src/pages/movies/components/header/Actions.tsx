@@ -36,7 +36,12 @@ const Actions = () => {
                     : 'asc',
               }));
             }}
-            suffixIcon={<ReactSVG src={sort} />}
+            suffixIcon={
+              <ReactSVG
+                src={sort}
+                loading={() => <div className="svg-skeleton"></div>}
+              />
+            }
           />
         </div>
 
@@ -47,7 +52,12 @@ const Actions = () => {
             onSelect={(option) => {
               useFilterValues(option.value as DropdownFilterKeyType);
             }}
-            suffixIcon={<ReactSVG src={filter} />}
+            suffixIcon={
+              <ReactSVG
+                src={filter}
+                loading={() => <div className="svg-skeleton"></div>}
+              />
+            }
           />
         </div>
       </div>

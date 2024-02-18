@@ -92,6 +92,39 @@
       "year": 2015,
       "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus.",
       "image": "/src/assets/movie-covers/stranger-things.svg"
+    },
+    {
+      "id": "2",
+      "category": "Action, Adventure",
+      "imdb": "82.0",
+      "country": "USA",
+      "isTvSeries": false,
+      "name": "Batman Begins",
+      "year": 2005,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus.",
+      "image": "/src/assets/movie-covers/batman-begins.svg"
+    },
+    {
+      "id": "3",
+      "category": "Animation, Action, Adventure",
+      "imdb": "84.0",
+      "country": "USA",
+      "isTvSeries": false,
+      "name": "Spider-Man : Into The Spider Verse",
+      "year": 2018,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus.",
+      "image": "/src/assets/movie-covers/spiderverse.svg"
+    },
+    {
+      "id": "6",
+      "category": "Action, Adventure, Thriller",
+      "imdb": "76.0",
+      "country": "USA",
+      "isTvSeries": false,
+      "name": "No Time To Die",
+      "year": 2021,
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula arcu eu facilisis blandit. Praesent ultrices, tellus at ultricies dapibus, quam justo consequat arcu, ut mattis augue libero eu ex. Sed vel efficitur lectus, eu posuere orci. Curabitur arcu libero, placerat vel dui non, malesuada ultrices velit. Vestibulum posuere, erat quis dignissim viverra, magna ex tincidunt dui, non facilisis turpis nisi quis nisi. Nunc nec diam tincidunt, porta tellus eget, egestas elit. Aliquam tortor nulla, tincidunt eget lectus vitae, tincidunt feugiat justo. Nam luctus aliquet diam, tincidunt laoreet quam posuere at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis purus nec convallis rhoncus.",
+      "image": "/src/assets/movie-covers/no-time-to-die.svg"
     }
   ]
 }

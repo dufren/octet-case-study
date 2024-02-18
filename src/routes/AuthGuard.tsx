@@ -1,13 +1,13 @@
 import { Navigate, useLocation } from 'react-router-dom';
 
 import { routeTree } from './routes';
-import { useAppSelector } from '@api/store/hooks';
 import { searchRoute } from '@helpers/auth';
 import { pathNames } from '../types/globals';
+import { useAppSelector } from '@store/hooks';
 
 const AuthGuard = (props: { children: JSX.Element }) => {
-  const isUserLoggedIn = useAppSelector((state) => state.auth.isAuthenticated);
   const { pathname } = useLocation();
+  const isUserLoggedIn = useAppSelector((state) => state.auth.isAuthenticated);
   const route = searchRoute(pathname, routeTree);
 
   if (isUserLoggedIn && pathname === pathNames.authentication.login) {

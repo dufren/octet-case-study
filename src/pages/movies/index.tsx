@@ -6,7 +6,7 @@ import { MoviesContext } from '@context/movies/context';
 import { useGetMoviesQuery } from '@api/movie/moviesApislice';
 import { useGetFavoritesQuery } from '@api/favorites/favoritesApiSlice';
 import ErrorMessage from '@components/error';
-import SpinLoader from '@components/loaders/SpinLoader';
+import PageLoadingSkeleton from './components/PageLoadingSkeleton';
 
 const Movies = () => {
   const { queryParams, filterValues } = React.useContext(MoviesContext);
@@ -17,6 +17,7 @@ const Movies = () => {
     isSuccess: moviesSuccess,
     isFetching: moviesFetching,
     isError: moviesError,
+    isLoading: moviesLoading,
   } = useGetMoviesQuery(queryParams);
 
   const favoriteIds = React.useMemo(() => {
@@ -40,15 +41,15 @@ const Movies = () => {
       );
     }
 
-    if (queryParams?.q?.length && moviesFetching) {
-      return <SpinLoader />;
+    if (moviesFetching) {
+      return <PageLoadingSkeleton />;
     }
 
     if (queryParams?.q?.length && moviesToDisplay?.length === 0) {
       return <ErrorMessage message="Film bulunamadı." />;
     }
 
-    if (moviesSuccess || moviesFetching) {
+    if (moviesSuccess || moviesLoading) {
       return (
         <MoviesContent
           moviesToDisplay={moviesToDisplay}

@@ -1,4 +1,4 @@
-import { apiSlice } from '@api/apiSlice';
+import { apiSlice } from '@api/base/apiSlice';
 import { movieCoversMap } from '@assets/movie-covers';
 import { useGenerateQueryParams } from '@hooks/useGenerateQueryParams';
 import { QueryParamsType } from 'types/context/movies';

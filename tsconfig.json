@@ -35,6 +35,8 @@
       "@features/*": ["./features/*"],
       "@hooks/*": ["./hooks/*"],
       "@context/*": ["./context/*"],
+      "@store/*": ["./store/*"],
+      "@schemas/*": ["./schemas/*"],
     },
   },
   "include": ["src", "eslintrc.json", "vite.config.ts"],
