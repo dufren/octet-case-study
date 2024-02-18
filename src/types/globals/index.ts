@@ -16,6 +16,12 @@ export const pathNames = {
   },
 } as const;
 
+export const routeTitles: { [key: string]: string } = {
+  '/': 'Giriş Yap',
+  '/movies': 'Filmler',
+  '/movies/:id': 'Film Detayı',
+};
+
 export const sortOptions = [
   { label: 'Film Adı', id: '1', value: 'name' },
   { label: 'Yayın Yılı', id: '2', value: 'year' },

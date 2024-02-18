@@ -1,4 +1,6 @@
+import { matchPath } from 'react-router-dom';
 import { IRoute } from '../../types/routes';
+import { routeTitles } from '../../types/globals';
 
 export const searchRoute = (
   pathname: string,
@@ -19,4 +21,20 @@ export const searchRoute = (
     }
   }
   return result;
+};
+
+export const getPageTitleFromUrl = (pathname: string) => {
+  const currentPageTitleKey = Object.keys(routeTitles).find((key) => {
+    if (matchPath({ path: key }, pathname)) {
+      return true;
+    }
+    return false;
+  });
+
+  if (currentPageTitleKey !== undefined || currentPageTitleKey !== null) {
+    //@ts-ignore
+    return routeTitles[currentPageTitleKey];
+  } else {
+    return 'Movies | Octet';
+  }
 };
