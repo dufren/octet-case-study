@@ -41,7 +41,10 @@ const Card: React.FC<CardProps> = (props) => {
         onClick={() => navigate(`${pathNames.movies.moviesPage}/${props.id}`)}
         className="card-image"
       >
-        <ReactSVG src={props.image} />
+        <ReactSVG
+          src={props.image}
+          loading={() => <div className="svg-skeleton"></div>}
+        />
         <button
           onClick={(e) => {
             e.stopPropagation();

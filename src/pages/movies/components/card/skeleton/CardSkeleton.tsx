@@ -1,6 +1,6 @@
 const CardSkeleton = () => {
   return (
-    <div className="skeleton shimmer">
+    <div className="skeleton">
       <div className="image"></div>
       <div className="info">
         <p className="year"></p>

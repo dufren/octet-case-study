@@ -6,6 +6,7 @@ import { MoviesContext } from '@context/movies/context';
 import { useGetMoviesQuery } from '@api/movie/moviesApislice';
 import { useGetFavoritesQuery } from '@api/favorites/favoritesApiSlice';
 import ErrorMessage from '@components/error';
+import SpinLoader from '@components/loaders/SpinLoader';
 
 const Movies = () => {
   const { queryParams, filterValues } = React.useContext(MoviesContext);
@@ -40,13 +41,10 @@ const Movies = () => {
     }
 
     if (queryParams?.q?.length && moviesFetching) {
-      return <ErrorMessage message="Film aranıyor..." />;
+      return <SpinLoader />;
     }
 
-    if (
-      (queryParams?.q?.length && moviesToDisplay?.length === 0) ||
-      moviesFetching
-    ) {
+    if (queryParams?.q?.length && moviesToDisplay?.length === 0) {
       return <ErrorMessage message="Film bulunamadı." />;
     }
 

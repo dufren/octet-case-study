@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { GetMoviesTransformedResponse } from '../../../../types/endpoints';
-import CardSkeleton from '../card/CardSkeleton';
+import CardSkeleton from '../card/skeleton/CardSkeleton';
 
 const Card = React.lazy(() => import('../card/index'));
 
