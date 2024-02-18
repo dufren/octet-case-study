@@ -2,8 +2,8 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 import { routeTree } from './routes';
 import { useAppSelector } from '@api/store/hooks';
-import { pathNames } from '../types/globals';
 import { searchRoute } from '@helpers/auth';
+import { pathNames } from '../types/globals';
 
 const AuthGuard = (props: { children: JSX.Element }) => {
   const isUserLoggedIn = useAppSelector((state) => state.auth.isAuthenticated);

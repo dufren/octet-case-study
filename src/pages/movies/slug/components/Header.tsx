@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { pathNames } from '../../../types/globals';
-import Favorites from '../components/header/Favorites';
+import { pathNames } from '../../../../types/globals';
+import Favorites from '../../components/header/Favorites';
 import SpinLoader from '@components/loaders/SpinLoader';
 
 type HeaderProps = {

@@ -1,4 +1,4 @@
-export type GetMoviesTransformedResponse = {
+export type BaseMovieResponse = {
   id: string;
   name: string;
   year: number;
@@ -7,28 +7,12 @@ export type GetMoviesTransformedResponse = {
   category: string;
   isTvSeries: boolean;
   summary: string;
+};
+
+export type GetMoviesTransformedResponse = BaseMovieResponse & {
   cover: string;
 };
 
-export type GetMovieTransformedResponse = {
-  id: string;
-  name: string;
-  year: number;
-  country: string;
-  imdb: number;
-  category: string;
-  isTvSeries: boolean;
-  summary: string;
+export type GetMovieTransformedResponse = BaseMovieResponse & {
   detailImage: string;
-};
-
-export type GetMoviesResponse = {
-  id: string;
-  name: string;
-  year: number;
-  country: string;
-  imdb: number;
-  category: string;
-  isTvSeries: boolean;
-  summary: string;
 };

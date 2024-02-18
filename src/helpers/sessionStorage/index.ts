@@ -1,6 +1,6 @@
 // i used the session storage because of testing purposes
 // i wanted to keep the user logged in after refreshing the page
-// and also i wanted to keep the user logged in after closing the tab for better testing
+// and also i wanted to log out the user after closing the tab for better testing
 
 const setSessionStorageItems = <T>(keys: string[], values: T[]): void => {
   if (keys.length !== values.length) return;

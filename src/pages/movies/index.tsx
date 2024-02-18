@@ -1,56 +1,70 @@
 import React from 'react';
 
-import { useGetFavoritesQuery, useGetMoviesQuery } from '@api/apiSlice';
 import MoviesContent from './components/content';
 import MoviesHeader from '@pages/movies/components/header';
-import PageLoader from '@components/loaders/PageLoader';
-
-export type DropdownSortKeyType = 'name' | 'year' | 'imdb';
-export type DropdownFilterKeyType = 'favorites' | 'initial';
-
-export type QueryParamsType = {
-  q?: string;
-  sort?: DropdownSortKeyType;
-  order?: 'asc' | 'desc';
-};
+import { MoviesContext } from '@context/movies/context';
+import { useGetMoviesQuery } from '@api/movie/moviesApislice';
+import { useGetFavoritesQuery } from '@api/favorites/favoritesApiSlice';
+import ErrorMessage from '@components/error';
 
 const Movies = () => {
-  const [queryParams, setQueryParams] = React.useState<QueryParamsType>();
-  const [filterValues, setFilterValues] =
-    React.useState<DropdownFilterKeyType>('initial');
+  const { queryParams, filterValues } = React.useContext(MoviesContext);
 
+  const { data: favData } = useGetFavoritesQuery();
   const {
     data: moviesData,
-    isLoading: moviesLoading,
+    isSuccess: moviesSuccess,
+    isFetching: moviesFetching,
     isError: moviesError,
   } = useGetMoviesQuery(queryParams);
 
-  const { data: favData } = useGetFavoritesQuery();
+  const favoriteIds = React.useMemo(() => {
+    if (!favData) return;
+    return favData.map((fav) => fav.id);
+  }, [favData]);
 
-  const favoriteIds = favData?.map((fav) => fav.id);
+  const moviesToDisplay = React.useMemo(() => {
+    if (!moviesData) return;
+    if (filterValues === 'favorites') {
+      return moviesData.filter((movie) => favoriteIds?.includes(movie.id));
+    }
 
-  if (moviesLoading) {
-    return <PageLoader />;
-  }
+    return moviesData;
+  }, [moviesData, favData, filterValues]);
 
-  if (moviesError) {
-    return <div>Film listesi alınamadı. Lütfen daha sonra tekrar deneyin.</div>;
-  }
+  const renderContent = () => {
+    if (moviesError) {
+      return (
+        <ErrorMessage message="Film listesi alınamadı. Lütfen daha sonra tekrar deneyin." />
+      );
+    }
+
+    if (queryParams?.q?.length && moviesFetching) {
+      return <ErrorMessage message="Film aranıyor..." />;
+    }
+
+    if (
+      (queryParams?.q?.length && moviesToDisplay?.length === 0) ||
+      moviesFetching
+    ) {
+      return <ErrorMessage message="Film bulunamadı." />;
+    }
+
+    if (moviesSuccess || moviesFetching) {
+      return (
+        <MoviesContent
+          moviesToDisplay={moviesToDisplay}
+          isLoading={moviesFetching}
+          favoriteIds={favoriteIds}
+        />
+      );
+    }
+  };
 
   return (
     <div className="movies-container">
-      <MoviesHeader
-        setActionValues={setQueryParams}
-        setFilterValues={setFilterValues}
-      />
-      <MoviesContent
-        moviesToDisplay={
-          moviesData && filterValues === 'favorites'
-            ? moviesData.filter((movie) => favoriteIds?.includes(movie.id))
-            : moviesData
-        }
-        favoriteIds={favoriteIds}
-      />
+      <MoviesHeader />
+      {renderContent()}
     </div>
   );
 };

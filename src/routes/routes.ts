@@ -2,9 +2,9 @@ import { lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import LazyLoader from '@components/loaders/LazyLoader';
-import { IRoute } from 'types/routes';
 import { authRoutes } from './configuration/auth-config';
 import { moviesRoutes } from './configuration/movies-config';
+import { IRoute } from '../types/routes';
 
 export const routeTree: IRoute[] = [
   ...authRoutes,

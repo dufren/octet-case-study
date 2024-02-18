@@ -1,21 +1,20 @@
 import { filter, sort } from '@assets/index';
 import Dropdown from '@components/ui/dropdown';
+import { ReactSVG } from 'react-svg';
+import { filterOptions, sortOptions } from '../../../../types/globals';
+import {
+  useSetFilterValues,
+  useSetQueryParams,
+} from '@context/movies/selectors';
 import {
   DropdownFilterKeyType,
   DropdownSortKeyType,
-  QueryParamsType,
-} from '@pages/movies';
-import { ReactSVG } from 'react-svg';
-import { filterOptions, sortOptions } from '../../../../types/globals';
+} from '../../../../types/context/movies';
 
-type ActionsProps = {
-  setActionValues: React.Dispatch<
-    React.SetStateAction<QueryParamsType | undefined>
-  >;
-  setFilterValues: React.Dispatch<React.SetStateAction<DropdownFilterKeyType>>;
-};
+const Actions = () => {
+  const useQueryParams = useSetQueryParams();
+  const useFilterValues = useSetFilterValues();
 
-const Actions: React.FC<ActionsProps> = (props) => {
   return (
     <div className="title-actions">
       <div className="title">
@@ -28,7 +27,7 @@ const Actions: React.FC<ActionsProps> = (props) => {
             title="Sırala"
             options={sortOptions}
             onSelect={(option) => {
-              props.setActionValues((prev) => ({
+              useQueryParams((prev) => ({
                 ...prev,
                 sort: option.value as DropdownSortKeyType,
                 order:
@@ -46,7 +45,7 @@ const Actions: React.FC<ActionsProps> = (props) => {
             title="Filtrele"
             options={filterOptions}
             onSelect={(option) => {
-              props.setFilterValues(option.value as DropdownFilterKeyType);
+              useFilterValues(option.value as DropdownFilterKeyType);
             }}
             suffixIcon={<ReactSVG src={filter} />}
           />

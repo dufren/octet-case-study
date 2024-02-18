@@ -23,6 +23,7 @@
     /* Alias */
     "baseUrl": "src",
     "paths": {
+      "@/*": ["./src/*", "./dist/*", ""],
       "@pages/*": ["./pages/*"],
       "@assets/*": ["./assets/*"],
       "@styles/*": ["./styles/*"],
@@ -33,8 +34,9 @@
       "@helpers/*": ["./helpers/*"],
       "@features/*": ["./features/*"],
       "@hooks/*": ["./hooks/*"],
+      "@context/*": ["./context/*"],
     },
   },
-  "include": ["src", "eslintrc.json"],
+  "include": ["src", "eslintrc.json", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
 }

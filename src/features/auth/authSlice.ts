@@ -26,13 +26,6 @@ const AuthSlice = createSlice({
         [action.payload, true]
       );
     },
-    logout: (state) => {
-      state = initialState;
-      SessionStorageHelper.clearItems([
-        AuthEnum.USER,
-        AuthEnum.IS_AUTHENTICATED,
-      ]);
-    },
   },
 });
 

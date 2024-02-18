@@ -1,4 +1,4 @@
-import { useGetFavoritesQuery } from '@api/apiSlice';
+import { useGetFavoritesQuery } from '@api/favorites/favoritesApiSlice';
 
 const Favorites = () => {
   const { data: favData } = useGetFavoritesQuery();

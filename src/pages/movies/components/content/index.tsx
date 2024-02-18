@@ -1,10 +1,14 @@
 import React from 'react';
-import Card from '../card';
-import { GetMoviesTransformedResponse } from '../../../../types/endpoints';
+
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { GetMoviesTransformedResponse } from '../../../../types/endpoints';
+import CardSkeleton from '../card/CardSkeleton';
+
+const Card = React.lazy(() => import('../card/index'));
 
 type MoviesContentProps = {
   moviesToDisplay: Array<GetMoviesTransformedResponse> | undefined;
+  isLoading: boolean;
   favoriteIds: Array<string> | undefined;
 };
 
@@ -16,35 +20,24 @@ const MoviesContent: React.FC<MoviesContentProps> = (props) => {
     return props.favoriteIds.includes(id);
   };
 
-  if (!props.moviesToDisplay?.length)
-    return (
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        Film veya Dizi bulunamadı...
-      </div>
-    );
-
   return (
     <div ref={parent} className="content">
       {props.moviesToDisplay?.map((movie) => (
         <div key={movie.id} className="card-container">
-          <Card
-            id={movie.id}
-            category={movie.category}
-            imdbScore={movie.imdb}
-            country={movie.country}
-            isTvSeries={movie.isTvSeries}
-            name={movie.name}
-            year={movie.year}
-            summary={movie.summary}
-            image={movie.cover}
-            isChecked={checkForFavorite(movie.id)}
-          />
+          <React.Suspense fallback={<CardSkeleton />}>
+            <Card
+              id={movie.id}
+              category={movie.category}
+              imdb={movie.imdb}
+              country={movie.country}
+              isTvSeries={movie.isTvSeries}
+              name={movie.name}
+              year={movie.year}
+              summary={movie.summary}
+              image={movie.cover}
+              isChecked={checkForFavorite(movie.id)}
+            />
+          </React.Suspense>
         </div>
       ))}
     </div>

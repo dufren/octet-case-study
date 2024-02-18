@@ -6,7 +6,7 @@ import { pathNames } from '../../../../types/globals';
 import {
   useAddFavoriteMutation,
   useRemoveFavoriteMutation,
-} from '@api/apiSlice';
+} from '@api/favorites/favoritesApiSlice';
 
 export type CardProps = {
   id: string;
@@ -14,7 +14,7 @@ export type CardProps = {
   year: number;
   country: string;
   name: string;
-  imdbScore: number;
+  imdb: number;
   isTvSeries: boolean;
   category: string;
   isChecked: boolean;
@@ -22,47 +22,26 @@ export type CardProps = {
 };
 
 const Card: React.FC<CardProps> = (props) => {
-  const {
-    id,
-    image,
-    year,
-    country,
-    name,
-    imdbScore,
-    isTvSeries,
-    category,
-    summary,
-    isChecked,
-  } = props;
-
+  const { isChecked, ...rest } = props;
   const navigate = useNavigate();
   const [addFavorite] = useAddFavoriteMutation();
   const [removeFavorite] = useRemoveFavoriteMutation();
 
   const toggleFavorite = () => {
     if (!isChecked) {
-      addFavorite({
-        id,
-        name,
-        year,
-        country,
-        imdb: imdbScore,
-        category,
-        isTvSeries,
-        summary,
-      });
+      addFavorite({ ...rest });
     } else {
-      removeFavorite(id);
+      removeFavorite(props.id);
     }
   };
 
   return (
     <div className="card">
       <div
-        onClick={() => navigate(`${pathNames.movies.moviesPage}/${id}`)}
+        onClick={() => navigate(`${pathNames.movies.moviesPage}/${props.id}`)}
         className="card-image"
       >
-        <ReactSVG src={image} />
+        <ReactSVG src={props.image} />
         <button
           onClick={(e) => {
             e.stopPropagation();
@@ -70,19 +49,19 @@ const Card: React.FC<CardProps> = (props) => {
           }}
           className="card-fav"
         >
-          <ReactSVG src={isChecked ? checkedFavorite : favorite} />
+          <ReactSVG src={props.isChecked ? checkedFavorite : favorite} />
         </button>
-        {isTvSeries && <ReactSVG className="card-badge" src={tvBadge} />}
+        {props.isTvSeries && <ReactSVG className="card-badge" src={tvBadge} />}
       </div>
 
       <div className="card-info">
-        <p className="year">{`${country}, ${year}`}</p>
-        <h2 className="name">{name}</h2>
+        <p className="year">{`${props.country}, ${props.year}`}</p>
+        <h2 className="name">{props.name}</h2>
         <div className="score">
           <ReactSVG className="logo" src={imdbLogo} />
-          <span className="score-number">{`${imdbScore} / 100`}</span>
+          <span className="score-number">{`${props.imdb} / 100`}</span>
         </div>
-        <p className="category">{category}</p>
+        <p className="category">{props.category}</p>
       </div>
     </div>
   );

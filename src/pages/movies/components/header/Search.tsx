@@ -1,23 +1,18 @@
 import { search } from '@assets/index';
 import { debounce } from '@hooks/useDebounce';
-import { QueryParamsType } from '@pages/movies';
 import { ReactSVG } from 'react-svg';
 import Favorites from './Favorites';
+import { useSetQueryParams } from '@context/movies/selectors';
 
-type SearchProps = {
-  setActionValues: React.Dispatch<
-    React.SetStateAction<QueryParamsType | undefined>
-  >;
-};
+const Search = () => {
+  const setQueryParams = useSetQueryParams();
 
-const Search: React.FC<SearchProps> = (props) => {
   const setDebouncedSearchValue = debounce((value: string) => {
-    if (!props.setActionValues) return;
-    props.setActionValues((prev) => ({
+    setQueryParams((prev) => ({
       ...prev,
       q: value,
     }));
-  }, 200);
+  }, 300);
 
   return (
     <div className="movies-header">
