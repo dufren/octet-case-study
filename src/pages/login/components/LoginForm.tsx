@@ -1,6 +1,10 @@
+import { useAppDispatch } from '@api/store/hooks';
+import { AuthActions } from '@features/auth/authSlice';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { LoginPayload } from 'types/login';
+import { useNavigate } from 'react-router-dom';
+import { pathNames } from '../../../types/globals';
+import { LoginPayload } from '../../../types/login';
 import * as yup from 'yup';
 
 const schema = yup.object({
@@ -17,16 +21,21 @@ const schema = yup.object({
 });
 
 const LoginForm = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const form = useForm({
     defaultValues: { email: '', password: '' },
     resolver: yupResolver(schema),
+    mode: 'all',
   });
 
   const { register, handleSubmit, formState } = form;
-  const { errors } = formState;
+  const { errors, isDirty, isValid } = formState;
 
   const onSubmit = (data: LoginPayload) => {
-    console.log(data);
+    dispatch(AuthActions.login(data.email));
+    navigate(pathNames.movies.moviesPage);
   };
 
   return (
@@ -41,10 +50,11 @@ const LoginForm = () => {
               type="text"
               placeholder="E-posta"
             />
-            {errors.email && (
-              <p className="form-field-error">{errors.email?.message}</p>
-            )}
+            <p className={`form-field-error ${errors.email && 'show'}`}>
+              {errors.email?.message}
+            </p>
           </div>
+
           <div className="form-field">
             <input
               {...register('password')}
@@ -52,11 +62,14 @@ const LoginForm = () => {
               type="password"
               placeholder="Şifre"
             />
-            {errors.password && (
-              <p className="form-field-error">{errors.password?.message}</p>
-            )}
+            <p className={`form-field-error ${errors.password && 'show'}`}>
+              {errors.password?.message}
+            </p>
           </div>
-          <button type="submit">Giriş</button>
+
+          <button disabled={!isDirty || !isValid} type="submit">
+            Giriş
+          </button>
         </form>
       </section>
     </main>

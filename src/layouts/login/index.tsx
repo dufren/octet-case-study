@@ -1,11 +1,11 @@
 import Footer from '@components/footer/Footer';
-import Header from '@pages/login/components/Header';
+import LoginHeader from '@pages/login/components/LoginHeader';
 import { Outlet } from 'react-router-dom';
 
 const LoginLayout = () => {
   return (
     <div>
-      <Header />
+      <LoginHeader />
       <Outlet />
       <Footer />
     </div>

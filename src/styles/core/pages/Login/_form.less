@@ -7,6 +7,7 @@
   .login-form {
     width: 708px;
     padding: 32px;
+    margin: 12px;
     border: 1px solid #d1d5db;
     border-radius: 16px;
     transition: all 0.3s ease-in-out;
@@ -37,12 +38,12 @@
 
           &:hover {
             border-color: #2563eb;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.1s ease-in-out;
           }
 
           &:focus {
-            border-color: #2563eb;
-            transition: all 0.3s ease-in-out;
+            outline: 2px solid #3b82f6;
+            transition: all 0.1s ease-in-out;
           }
 
           &.error {
@@ -50,9 +51,22 @@
           }
         }
 
-        & > p {
+        .form-field-error {
           color: #ff0000;
           margin-top: 0.5rem;
+          opacity: 0;
+          height: 0;
+          transition:
+            opacity 0.3s ease-in-out,
+            height 0.3s ease-in-out;
+
+          &.show {
+            opacity: 1;
+            height: auto;
+            transition:
+              opacity 0.3s ease-in-out,
+              height 0.3s ease-in-out;
+          }
         }
       }
 
@@ -69,6 +83,18 @@
           color: #ffffff;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
           transition: all 0.3s ease-in-out;
+        }
+
+        &:disabled {
+          background-color: #d1d5db;
+          border-color: #d1d5db;
+          color: #ffffff;
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+
+        &:focus {
+          outline: 2px solid #3b82f6;
         }
       }
     }

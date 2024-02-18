@@ -10,13 +10,7 @@ function SpinLoader() {
         color="#3b82f6"
         ariaLabel="tail-spin-loading"
         radius="1"
-        wrapperStyle={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-        }}
-        wrapperClass=""
+        wrapperClass="loader-wrapper"
       />
     </div>
   );

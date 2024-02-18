@@ -1,0 +1,25 @@
+.movies-header {
+  position: relative;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .movies-filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .movies-favorites {
+    position: relative;
+    right: 0px;
+    text-align: right;
+
+    @media @lg {
+      position: absolute;
+    }
+  }
+}

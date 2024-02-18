@@ -1,0 +1,41 @@
+.movies-container {
+  min-height: calc(100vh - 255px);
+
+  .content {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-block-start: 3rem;
+  }
+
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media @xsm {
+    .content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media @md {
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media @lg {
+    .content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media @2xl {
+    .content {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

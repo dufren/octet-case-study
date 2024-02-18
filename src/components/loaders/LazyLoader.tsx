@@ -1,11 +1,11 @@
 import React from 'react';
-import SpinLoader from './SpinLoader';
+import PageLoader from './PageLoader';
 
 function LazyLoader(
   Component: React.LazyExoticComponent<any>
 ): React.ReactNode {
   return (
-    <React.Suspense fallback={<SpinLoader />}>
+    <React.Suspense fallback={<PageLoader />}>
       <Component />
     </React.Suspense>
   );
