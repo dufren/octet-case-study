@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# JSON Server
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a simple JSON Server setup for your API needs. Please ensure that you are using version 0.17.4, as higher or lower versions are not supported. In particular, the v1-alpha version is not supported.
 
-Currently, two official plugins are available:
+# How to Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the JSON Server, follow these steps:
 
-## Expanding the ESLint configuration
+Install Node.js on your machine if you haven't already.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Open your terminal or command prompt.
 
-- Configure the top-level `parserOptions` property like this:
+Navigate to the project directory.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Run the following command to start the JSON Server:
+
+```bash
+npx json-server -p 3500 -w data/db.json
 ```
+This command initializes the JSON Server on port 3500 and watches the db.json file for changes.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Your API will be accessible at http://localhost:3500.
