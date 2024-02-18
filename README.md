@@ -1,7 +1,9 @@
-#JSON Server
+# JSON Server
+
 This repository contains a simple JSON Server setup for your API needs. Please ensure that you are using version 0.17.4, as higher or lower versions are not supported. In particular, the v1-alpha version is not supported.
 
-#How to Run
+# How to Run
+
 To run the JSON Server, follow these steps:
 Install Node.js on your machine if you haven't already.
 Open your terminal or command prompt.
