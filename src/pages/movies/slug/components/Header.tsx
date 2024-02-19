@@ -19,7 +19,9 @@ const Header: React.FC<HeaderProps> = (props) => {
         </button>
       </div>
       <div>
-        <h1>{props.loading ? <SpinLoader /> : props.name}</h1>
+        <h1 className="detail-title">
+          {props.loading ? <SpinLoader /> : props.name}
+        </h1>
       </div>
       <Favorites />
     </div>

@@ -1,16 +1,37 @@
 .detail-container {
+  min-height: calc(100vh - 150px);
+
   .detail-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 
-    padding-top: 2rem;
-    margin-bottom: 2rem;
+    padding-block: 3rem;
+
+    .detail-title {
+      text-align: center;
+      @media @md {
+        font-size: 24px;
+      }
+
+      @media @sm {
+        font-size: 20px;
+      }
+
+      @media @xsm {
+        font-size: 16px;
+      }
+
+      @media @lg {
+        font-size: 32px;
+      }
+    }
   }
 
   .detail-content {
     .image-container {
+      max-width: 100%;
       position: relative;
       width: max-content;
       margin: 0 auto;
@@ -18,6 +39,10 @@
       .movie-poster {
         display: flex;
         justify-content: center;
+
+        & > div > svg {
+          max-width: 100%;
+        }
       }
 
       .card-fav {
@@ -36,8 +61,23 @@
     }
 
     .summary {
-      font-size: 2rem;
       font-weight: 500;
+
+      @media @md {
+        font-size: 24px;
+      }
+
+      @media @sm {
+        font-size: 20px;
+      }
+
+      @media @xsm {
+        font-size: 16px;
+      }
+
+      @media @lg {
+        font-size: 32px;
+      }
     }
 
     .detail-card-info {
