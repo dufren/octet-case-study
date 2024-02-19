@@ -7,6 +7,7 @@ import {
   useAddFavoriteMutation,
   useRemoveFavoriteMutation,
 } from '@api/favorites/favoritesApiSlice';
+import toast from 'react-hot-toast';
 
 export type CardProps = {
   id: string;
@@ -23,15 +24,18 @@ export type CardProps = {
 
 const Card: React.FC<CardProps> = (props) => {
   const { isChecked, ...rest } = props;
+
   const navigate = useNavigate();
   const [addFavorite] = useAddFavoriteMutation();
   const [removeFavorite] = useRemoveFavoriteMutation();
 
   const toggleFavorite = () => {
     if (!isChecked) {
-      addFavorite({ ...rest });
+      addFavorite({ ...rest }).then(() => toast.success('Favoriye eklendi!'));
     } else {
-      removeFavorite(props.id);
+      removeFavorite(props.id).then(() =>
+        toast.success('Favoriden kaldırıldı!')
+      );
     }
   };
 

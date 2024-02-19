@@ -1,5 +1,5 @@
 .content-container {
-  height: calc(100vh - 230px);
+  min-height: calc(100vh - 230px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,28 +29,6 @@
       gap: 1rem;
 
       .form-field {
-        & > input {
-          width: 100%;
-          padding: 12px;
-          border-radius: 8px;
-          border: 1px solid #d1d5db;
-          transition: all 0.3s ease-in-out;
-
-          &:hover {
-            border-color: #2563eb;
-            transition: all 0.1s ease-in-out;
-          }
-
-          &:focus {
-            outline: 2px solid #3b82f6;
-            transition: all 0.1s ease-in-out;
-          }
-
-          &.error {
-            border-color: #ff0000;
-          }
-        }
-
         .form-field-error {
           color: #ff0000;
           margin-top: 0.5rem;

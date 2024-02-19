@@ -24,7 +24,7 @@ const MovieDetail = () => {
   const isChecked = React.useMemo(() => {
     if (!favorites || !movieData) return false;
     return favorites.some((fav) => fav.id === movieData.id);
-  }, [favorites]);
+  }, [favorites, movieData]);
 
   const renderContent = () => {
     if (isError) {

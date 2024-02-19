@@ -6,6 +6,7 @@ import { checkedFavorite, favorite, imdbLogo } from '@assets/index';
 import { johnWick } from '@assets/movie-posters';
 import { ReactSVG } from 'react-svg';
 import { BaseMovieResponse } from '../../../../types/endpoints';
+import toast from 'react-hot-toast';
 
 type DetailContentProps = {
   data: BaseMovieResponse;
@@ -20,9 +21,11 @@ const DetailContent: React.FC<DetailContentProps> = (props) => {
     if (!props.data) return;
 
     if (!props.isChecked) {
-      addFavorite(props.data);
+      addFavorite(props.data).then(() => toast.success('Favoriye eklendi!'));
     } else {
-      removeFavorite(props.data.id);
+      removeFavorite(props.data.id).then(() =>
+        toast.success('Favoriden kaldırıldı!')
+      );
     }
   };
   return (

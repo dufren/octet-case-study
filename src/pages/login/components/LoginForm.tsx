@@ -1,15 +1,13 @@
 import { AuthActions } from '@features/auth/authSlice';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { pathNames } from '../../../types/globals';
 import { LoginPayload } from '../../../types/login';
 import { useAppDispatch } from '@store/hooks';
 import { loginSchema } from '@schemas/login';
+import Input from '@components/ui/input';
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
 
   const form = useForm({
     defaultValues: { email: '', password: '' },
@@ -21,31 +19,36 @@ const LoginForm = () => {
 
   const onSubmit = (data: LoginPayload) => {
     dispatch(AuthActions.login(data.email));
-    navigate(pathNames.movies.moviesPage);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-field">
-        <input
-          {...register('email')}
-          className={errors.email ? 'error' : ''}
+        <Input
+          register={{ ...register('email') }}
           type="text"
           placeholder="E-posta"
+          className={errors.email ? 'error' : ''}
         />
-        <p className={`form-field-error ${errors.email && 'show'}`}>
+        <p
+          style={{ height: '25px' }}
+          className={`form-field-error ${errors.email && 'show'}`}
+        >
           {errors.email?.message}
         </p>
       </div>
 
       <div className="form-field">
-        <input
-          {...register('password')}
-          className={errors.password ? 'error' : ''}
+        <Input
+          register={{ ...register('password') }}
           type="password"
           placeholder="Şifre"
+          className={errors.password ? 'error' : ''}
         />
-        <p className={`form-field-error ${errors.password && 'show'}`}>
+        <p
+          style={{ height: '25px' }}
+          className={`form-field-error ${errors.password && 'show'}`}
+        >
           {errors.password?.message}
         </p>
       </div>
