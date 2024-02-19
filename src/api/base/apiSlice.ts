@@ -19,8 +19,8 @@ const baseQueryWithError: BaseQueryFn<
   const result = await baseQuery(args, api, extraOptions);
 
   if (result.error) {
-    const error = result.error as FetchBaseQueryError;
-    toast.error(error.status + ' ' + error.data);
+    const error = result.error as { status: string; error: string };
+    toast.error(error.status + ' ' + error.error);
   }
   return result;
 };

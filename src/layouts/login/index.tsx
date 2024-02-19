@@ -1,4 +1,4 @@
-import Helmet from '@components/Helmet';
+import Helmet from '@components/ui/helmet';
 import Footer from '@components/footer/Footer';
 import LoginHeader from '@pages/login/components/LoginHeader';
 import { Outlet } from 'react-router-dom';

@@ -46,6 +46,12 @@ const Movies = () => {
     }
 
     if (queryParams?.q?.length && moviesToDisplay?.length === 0) {
+      return (
+        <ErrorMessage message={`${queryParams.q} için bir arama bulunamadı!`} />
+      );
+    }
+
+    if (moviesToDisplay?.length === 0) {
       return <ErrorMessage message="Film bulunamadı." />;
     }
 

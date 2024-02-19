@@ -31,11 +31,13 @@ const Card: React.FC<CardProps> = (props) => {
 
   const toggleFavorite = () => {
     if (!isChecked) {
-      addFavorite({ ...rest }).then(() => toast.success('Favoriye eklendi!'));
+      addFavorite({ ...rest }).then((res) => {
+        if ('data' in res) toast.success('Favoriye eklendi!');
+      });
     } else {
-      removeFavorite(props.id).then(() =>
-        toast.success('Favoriden kaldırıldı!')
-      );
+      removeFavorite(props.id).then((res) => {
+        if ('data' in res) toast.success('Favoriden kaldırıldı!');
+      });
     }
   };
 

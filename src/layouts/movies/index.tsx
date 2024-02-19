@@ -1,4 +1,4 @@
-import Helmet from '@components/Helmet';
+import Helmet from '@components/ui/helmet';
 import Footer from '@components/footer/Footer';
 import { MoviesProvider } from '@context/movies/provider';
 import { Outlet } from 'react-router-dom';

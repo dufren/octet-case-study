@@ -21,11 +21,13 @@ const DetailContent: React.FC<DetailContentProps> = (props) => {
     if (!props.data) return;
 
     if (!props.isChecked) {
-      addFavorite(props.data).then(() => toast.success('Favoriye eklendi!'));
+      addFavorite(props.data).then((res) => {
+        if ('data' in res) toast.success('Favoriye eklendi!');
+      });
     } else {
-      removeFavorite(props.data.id).then(() =>
-        toast.success('Favoriden kaldırıldı!')
-      );
+      removeFavorite(props.data.id).then((res) => {
+        if ('data' in res) toast.success('Favoriden kaldırıldı!');
+      });
     }
   };
   return (
